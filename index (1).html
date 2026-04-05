@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEZTECH PRO</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+<h1>DEZTECH Solutions</h1>
+<input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">
+</header>
+
+<div class="filters">
+<select id="sectionFilter" onchange="searchFunction()">
+<option value="all">All Sections</option>
+<option value="portfolio">Graphic</option>
+<option value="farming">Farming</option>
+<option value="business">Business</option>
+</select>
+
+<select id="premiumFilter" onchange="searchFunction()">
+<option value="all">All</option>
+<option value="free">Free</option>
+<option value="premium">Premium</option>
+</select>
+</div>
+
+<div id="portfolio" class="section"><h2>Graphic Design</h2><div id="portfolioContainer"></div></div>
+<div id="farming" class="section"><h2>Farming</h2><div id="farmingContainer"></div></div>
+<div id="business" class="section"><h2>Business</h2><div id="businessContainer"></div></div>
+
+<h2>Admin Upload</h2>
+<input type="text" id="name" placeholder="Title">
+<input type="file" id="file">
+<select id="section">
+<option value="portfolio">Graphic</option>
+<option value="farming">Farming</option>
+<option value="business">Business</option>
+</select>
+<label><input type="checkbox" id="premium"> Premium</label>
+<button onclick="addItem()">Upload</button>
+
+<p id="noResults" style="display:none;color:red;">No results found</p>
+
+<script src="script.js"></script>
+</body>
+</html>
